@@ -1,0 +1,248 @@
+/* general */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  max-height: 100vh;
+  font-size: 62.5%;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+::placeholder {
+  color: #f76c6c;
+}
+
+/* header */
+
+header {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 1rem;
+  height: 10vh;
+}
+
+header img {
+  max-width: 96px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+/* main */
+
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  min-height: 51.5vh;
+}
+
+main > h2 {
+  padding: 1rem 0;
+}
+
+.new-member-form {
+  margin: 2rem 0 4rem 0;
+  text-align: center;
+}
+
+.new-member-form > input {
+  width: 40%;
+  padding: 0.2rem 0;
+  text-align: center;
+  margin-left: 4rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+}
+
+.new-member-form > input:focus {
+  border-color: #f76c6c;
+}
+
+.new-member-form > input:focus::placeholder {
+  color: black;
+}
+
+.new-member-form > button {
+  padding: 0.2rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #f76c6c;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: #f76c6c;
+  transition: all ease-in 0.2s;
+}
+
+.new-member-form > button:hover {
+  color: white;
+  background: #f76c6c;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+label {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.member-list {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  margin: 2rem 0 2rem 4.5rem;
+}
+
+.member-item {
+  font-size: 1rem;
+  flex: 1 1 30%;
+  max-width: 30%;
+  padding: 0.25rem 0;
+}
+
+/* footer */
+
+footer {
+  position: relative;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.boat {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url("./assets/images/boat.svg");
+  background-position: center;
+  background-size: cover;
+  min-width: 25rem;
+  min-height: 14rem;
+  z-index: 998;
+  animation: boat 30s linear infinite;
+  transition: all ease 1s;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: url("./assets/images/Vector.svg");
+}
+
+footer .wave.wave1 {
+  animation: animate 18s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+footer .wave.wave2 {
+  animation: animate 22s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-direction: reverse;
+  animation-delay: -5s;
+  bottom: 2px;
+}
+
+footer .wave.wave3 {
+  animation: animate 20s linear infinite;
+  z-index: 997;
+  opacity: 1;
+  animation-direction: reverse;
+  animation-delay: -2s;
+  bottom: 4px;
+}
+
+footer .wave.wave4 {
+  animation: animate 20s linear infinite;
+  z-index: 996;
+  opacity: 0.7;
+  animation-direction: reverse;
+  animation-delay: -7s;
+  bottom: 2px;
+}
+
+@keyframes input-border {
+  0% {
+  }
+
+  100% {
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1600px;
+  }
+}
+
+@keyframes boat {
+  0% {
+    transform: translateX(-500px) rotateZ(0deg);
+  }
+
+  10% {
+    transform: translateX(-290px) rotateZ(5deg);
+  }
+
+  20% {
+    transform: translateX(-80px) rotateZ(0deg);
+  }
+
+  30% {
+    transform: translateX(130px) rotateZ(-5deg);
+  }
+
+  40% {
+    transform: translateX(340px) rotateZ(0deg);
+  }
+
+  50% {
+    transform: translateX(550px) rotateZ(5deg);
+  }
+
+  60% {
+    transform: translateX(760px) rotateZ(0deg);
+  }
+
+  70% {
+    transform: translateX(970px) rotateZ(-5deg);
+  }
+
+  80% {
+    transform: translateX(1180px) rotateZ(0deg);
+  }
+
+  90% {
+    transform: translateX(1390px) rotateZ(5deg);
+  }
+
+  100% {
+    transform: translateX(1600px) rotateZ(0deg);
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Header section -->
+    <header>
+      <h1>
+        <img
+          src="https://www.wildcodeschool.com/assets/logo_main-e4f3f744c8e717f1b7df3858dce55a86c63d4766d5d9a7f454250145f097c2fe.png"
+          alt="Wild Code School logo"
+        />
+        Les Argonautes
+      </h1>
+    </header>
+
+    <!-- Main section -->
+    <main>
+      <!-- New member form -->
+      <h2>Ajouter un(e) Argonaute</h2>
+      <form class="new-member-form">
+        <label for="name">Nom de l&apos;Argonaute</label>
+        <input id="name" name="name" type="text" placeholder="Charalampos" />
+        <button type="submit">Envoyer</button>
+      </form>
+
+      <!-- Member list -->
+      <h2>Membres de l'équipage</h2>
+      <section class="member-list"></section>
+    </main>
+
+    <footer>
+      <div class="boat"></div>
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+    </footer>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyB5UV9Ai3UScJwqcKHF1X8qOeSdfw1jdPE",
+        authDomain: "wildcodeschool-db997.firebaseapp.com",
+        databaseURL: "https://wildcodeschool-db997.firebaseio.com",
+        projectId: "wildcodeschool-db997",
+        storageBucket: "wildcodeschool-db997.appspot.com",
+        messagingSenderId: "938927197690",
+        appId: "1:938927197690:web:22fb21311c3e2063fee843",
+        measurementId: "G-WD83Q9JGX2",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+  </body>
+</html>
