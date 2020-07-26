@@ -10,7 +10,8 @@ form.addEventListener("submit", async (event) => {
   const entries = formData.entries();
   const obj = Object.fromEntries(entries);
   console.log(obj);
-  if (input.value) {
+  const value = input.value.trim();
+  if (value) {
     try {
       const json = JSON.stringify(obj);
       const response = await fetch(
